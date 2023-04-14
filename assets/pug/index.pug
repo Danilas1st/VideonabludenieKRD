@@ -1,0 +1,219 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.hero 
+		.section_in
+			.hero_main
+				.hero_main_top 
+					.hero_main_top_btn
+						button(type="button") 
+							p от 6 390 руб.
+							+icon('next')
+					.hero_main_top_txt
+						h1 Установка видеонаблюдения под ключ <span> в Краснодаре и крае</span>
+						p Подберем, установим и подключим видеонаблюдение под ваши запросы! Работаем с частными и юридическими лицами.
+					.hero_main_top_link 
+						button(type="button" data-target="form" class="trigger") Получить расчёт стоимости
+				.hero_main_bottom 
+					ul 
+						li
+							.bottom_content
+								.bottom_content_top 
+									img(src="i/icons/ok.svg", alt="") 
+									h3 Более 7 лет работы
+								p Произвели более 200 монтажей объектов за последний год.
+						li 
+							.bottom_content
+								.bottom_content_top 
+									img(src="i/icons/ok.svg", alt="") 
+									h3 Крупные клиенты
+								p Агрокомплекс, Кубань Кредит, Магнит, Вайлдберрис, Озон, ВТБ и другие.
+						li
+							.bottom_content
+								.bottom_content_top 
+									img(src="i/icons/ok.svg", alt="") 
+									h3 Бесплатный выезд
+								p Выезд на обследования бесплатно, оплата после окончания работ.
+	section.selection
+		.section_in 
+			.selection_main_tab 
+				.selection_head 
+					h2 Подбор видеонаблюдения <span> для любых задач</span>
+				.selection_tab_nav
+					ul 
+						li.tab_nav_item.active_tab(data-tab="tab0") По назначению
+						li.tab_nav_item(data-tab="tab1")  Комплексные предложения
+						li.tab_nav_item(data-tab="tab2")  Другие услуги
+				.selection_tab_content
+					ul
+						-for(i = 0; i < 3; i++)
+							li.tab_content(data-tab=`tab${i}`) 
+								.selection_img
+									p Скидка 10%
+									img(src="i/purpose/purpose1.png", alt="")
+								.selection_txt 
+									h3 Для кофейни или мини магазина
+									p Видеонаблюдение для небольшого бизнеса (цена с работой и интернет решением)
+								.selection_price 
+									p от 10 780 ₽ 
+									button(type="button" data-target="form").trigger Заказать
+	section.company 
+		.section_in 
+			.company_main
+				.company_head 
+					h2 О компании
+				.company_txt 
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					span Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				.company_info 
+					ul 
+						li 
+							p 7+
+							span Лет на рынке
+						li 
+							p 1370+
+							span Объектов выполнено
+						li 
+							p 20+
+							span Постоянных клиентов 
+						li 
+							p 20+
+							span Объектов на обслуживании
+	section.partners 
+		.section_in 
+			.partners_main
+				.partners_head 
+					h2 Бренды, с которыми <span> работаем
+					.reviews_slider_nav 
+						.reviews_slider_btn_prewios 
+							button(type="button")
+								+icon('previous')
+						.reviews_slider_btn_next 
+							button(type="button")
+								+icon('next')
+				.partners_slider_w
+					.partners_slider.swiper-auto  
+						.swiper-wrapper
+							-for(i = 0; i < 10; i++)
+								.swiper-slide 
+									.partners_slide
+										img(src="i/partners/partners1.png", alt="")
+						.swiper-scrollbar
+	section.examples
+		.section_in 
+			.examples_main
+				.examples_header
+					h2 Примеры выполненных <span> объектов</span>
+				.examples_tab_nav
+					ul 
+						li.tab_main_item.active_tab(data-tab="tab0") Частные дома 
+						li.tab_main_item(data-tab="tab1") Многоквартирные дома
+						li.tab_main_item(data-tab="tab2") Малый бизнес 
+						li.tab_main_item(data-tab="tab3") Крупный бизнес
+				.examples_tab_content
+					ul
+						-for(i = 0; i < 4; i++)
+							li.tab_content_list(data-tab=`tab${i}`) 
+								.example_img
+									a(href="#" data-fancybox="gallery-a") 
+									a(href="#" data-fancybox="gallery-a")
+									a(href="#" data-fancybox="gallery-a") 
+										img(src="i/examples.png", alt="")
+								.examples_info 
+									.examples_head 
+										h3 Название объекта
+									.examples_quantity
+										ul
+											ol.quantity
+												img(src="i/icons/camera.svg", alt="")
+												p 5 камер
+											ol.quantity.clock
+												img(src="i/icons/clock.svg", alt="")
+												p 8 часов работы
+									.examples_txt 
+										p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										span Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				.examples_btn 
+					button(type="button") 
+						p Показать больше
+						+icon('arrow')
+	section.order
+		.section_in 
+			.order_main
+				.order_main_left
+					.order_main_head
+						h2 Заказать <span>бесплатный</span> выезд мастера на объект
+						p Мы приедем к вам бесплатно, оценим масштаб работы и проконсультируем по всем вопросам.
+					.order_main_link 
+						.order_main_phone 
+							img(src="i/icons/mobil.svg", alt="")
+							a(href="#")
+								p  8 (918) 981-70-03
+						.order_main_mail 
+							img(src="i/icons/mail.svg", alt="")
+							a(href="#")
+								p yug-bezopasnost@yandex.ru
+				.order_main_right 
+					form.connection_form
+						.connection_form_input
+							input(type="text" placeholder="Ваше имя")
+						.connection_form_input
+							input(type="tel" placeholder="Ваш телефон")
+						.connection_form_input_message
+							textarea(name="Комментарий (необязательно)" placeholder="Комментарий (необязательно)" cols="30", rows="10")
+						.connection_bottom_w
+							.connection_form_btn
+								button(type="submit") Отправить
+							.connection_policy!='Отправляя форму, вы соглашаетесь с <a href="#"> политикой конфиденциальности</a>.'
+	section.reviews
+		.section_in 
+			.reviews_main
+				.reviews_head 
+					h2 Отзывы <span> клиентов</span>
+				.reviews_slider_nav 
+					.reviews_slider_btn_prewios 
+						button(type="button")
+							+icon('previous')
+					.reviews_slider_btn_next 
+						button(type="button")
+							+icon('next')
+			.reviews_slider_w
+				.reviews_slider.swiper 
+					.swiper-wrapper
+						-for(i = 0; i < 15; i++)
+							.swiper-slide 
+								.reviews_slide
+									a(href="i/reviews/reviews1.jpg" data-fancybox="riviews_img")
+										img(src="i/reviews/reviews1.jpg", alt="")
+					.swiper-scrollbar
+	section.contact 
+		.section_in 
+			.contact_main 
+				.contact_head 
+					h2 Наши <span> контакты</span>
+				.contact_main_info
+					.contact_main_link 
+						ul 
+							li
+								.contact_main_phone
+									img(src="i/icons/mobil.svg", alt="")
+									a(href="#")
+										p  8 (918) 981-70-03 
+							li
+								.contact_main_mail 
+									img(src="i/icons/mail.svg", alt="")
+									a(href="#")
+										p yug-bezopasnost@yandex.ru
+							li 
+								.contact_main_addres 
+									img(src="i/icons/mapmark.svg", alt="")
+									p Краснодар
+					.contact_social 
+						.contact_social_wh 
+							a(href="#")
+								img(src="i/icons/whatsapp.svg", alt="")
+						.contact_social_tg 
+							a(href="#")
+								img(src="i/icons/telegram.svg", alt="") 

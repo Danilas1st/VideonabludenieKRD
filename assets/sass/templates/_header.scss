@@ -1,0 +1,149 @@
+.header {
+}
+.section_in {
+}
+.header_main {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@include bp($point_2) {
+		margin-top: 2rem;
+	}
+}
+.header_logo {
+	@include bp($point_5) {
+		max-width: 22rem;
+	}
+}
+.header_menu {
+	ul {
+		display: flex;
+	}
+	li {
+		&:hover {
+			transform: scale(1.1);
+			transition: all .3s;
+		}
+		&:not(:last-child) {
+			margin-right: 6rem;
+		}
+	}
+	a {
+		font-family: $font_2;
+		color: $white;
+	}
+	@include bp($point_2) {
+		display: none;
+	}
+}
+.header_social {
+	display: flex;
+}
+.header_social_wh {
+	margin-right: 2.5rem;
+	border-radius: 4rem;
+	height: 4.4rem;
+	width: 4.4rem;
+	overflow: hidden;
+	a {
+		@include flex-center;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(67.62deg, #00A867 1.42%, #00FF38 113.45%);
+		padding: 1.3rem;
+		}
+	&:hover {
+		transform: scale(1.1);
+		transition: all .3s;
+	}
+	@include bp($point_2) {
+		display: none;
+	}
+}
+.header_social_tg {
+	border-radius: 4rem;
+	height: 4.4rem;
+	width: 4.4rem;
+	overflow: hidden;
+	a {
+		@include flex-center;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(63.43deg, #009BDE 5.68%, #5ECFFF 111.74%);
+		padding: 1.3rem;
+		}
+	&:hover {
+		transform: scale(1.1);
+		transition: all .3s;
+	}
+	@include bp($point_2) {
+		display: none;
+	}
+}
+.header_phone {
+	margin-top: 2.3rem;
+	@include bp($point_2) {
+		display: none;
+	}
+}
+.header_tel {
+	margin-bottom: 0.5rem;
+	&:hover {
+		transform: scale(1.1);
+		transition: all .3s;
+	}
+	a {
+		font-size: 2.5rem;
+		color: $asblue2;
+		font-family: $font_4;
+	}
+}
+.header_call-back {
+	display: flex;
+	justify-content: end;
+	&:hover {
+		transform: scale(1.1);
+		transition: all .3s;
+	}
+	a {
+		font-size: 1.6rem;
+		font-family: $font_1;
+		color: $white;
+	}
+	p {
+		border-bottom: .1rem dashed $white;
+	}
+}
+.burger_trigger {
+	width: 3rem;
+	height: 2rem;
+	position: relative;
+	display: none;
+	@include bp($point_2) {
+		display: block;
+	}
+	@include bp($point_5) {
+		height: 1.8rem;
+	}
+	span {
+		display: flex;
+		width: 100%;
+		height: .3rem;
+		background-color: $white;
+		position: absolute;
+		top: 0;
+		right: 0;
+		pointer-events: none;
+		border-radius: 1rem;
+		&:nth-child(2) {
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+		}
+		&:nth-child(3) {
+			top: auto;
+			bottom: 0;
+			width: 100%;
+		}
+	}
+}

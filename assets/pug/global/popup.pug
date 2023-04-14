@@ -1,0 +1,58 @@
+.popup.popup_submit(data-id="form")
+	.popup_form_bg.close_popups.remove
+	.popup_form_w
+		.popup_close.close_popups.remove 
+			button(type="button")
+				+icon('close')
+		.popup_form_head 
+			h3 Оставьте <span>заявку
+			p Мы проконсультируем вас по всем интересующим вопросам.
+		form.popup_form
+			.popup_form_input
+				input(type="text" placeholder="Ваше имя")
+			.popup_form_input
+				input(type="tel" placeholder="Ваш телефон")
+			.popup_form_input_message
+				textarea(name="Комментарий (необязательно)" placeholder="Комментарий (необязательно)" cols="30", rows="10")
+			.popup_form_bottom
+				.popup_form_btn 
+					button(type="submit") Отправить
+				.popup_policy!='Отправляя форму, вы соглашаетесь с <a href="#"> политикой конфиденциальности</a>.'
+
+
+
+
+.popup.popup_menu(data-id="menu")
+	.popup_form_bg_m.close_popups.remove 
+	.popup_form_m
+		.popup_close_m.close_popups.remove 
+			button(type="button")
+				+icon('close')
+		.popup_menu_head 
+			.popup_logo 
+				a(href="#")
+					img(src="i/logo.svg", alt="")
+		.popup_menu 
+			ul 
+				li 
+					a(href="#") Услуги
+				li 
+					a(href="#") О компании
+				li 
+					a(href="#") Работы
+				li 
+					a(href="#") Отзывы
+				li 
+					a(href="#") Контакты
+		.popup_info
+			.popup_tel
+				img(src="i/icons/mobil.svg", alt="")
+				a(href="#")
+					p 8 (918) 981-70-03
+			.popup_social 
+				.popup_wh 
+					a(href="#")
+						img(src="i/icons/whatsapp.svg", alt="")
+				.popup_tg
+					a(href="#")
+						img(src="i/icons/telegram.svg", alt="") 
