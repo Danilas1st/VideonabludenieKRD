@@ -752,8 +752,11 @@
 .example_img {
 	margin-right: 5rem;
 	margin-bottom: 6rem;
-	img {
+	a, img {
 		width: 64rem;
+		&:not(:nth-child(1)) {
+			display: none;
+		}
 	}
 	@include bp($point_2) {
 		margin-bottom: 1rem;
